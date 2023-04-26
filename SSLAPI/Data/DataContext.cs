@@ -32,8 +32,19 @@ namespace SSLAPI.Data
         {
             modelBuilder.Entity<PokemonCategory>()
                 .HasKey(pc => new {pc.PokemonId, pc.CategoryId});
-          
+            modelBuilder.Entity<PokemonCategory>()
+                .HasOne(p => p.Pokemon)
+                .WithMany(pc => pc.PokemonCategories)
+                .HasForeignKey(c=> c.PokemonId);
+            modelBuilder.Entity<PokemonCategory>()
+               .HasOne(p => p.Category)
+               .WithMany(pc => pc.PokemonCategories)
+               .HasForeignKey(c => c.CategoryId);
+            //
+            //
 
+
+         
         }
     }
 }
