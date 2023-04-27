@@ -16,6 +16,25 @@ builder.Services.AddDbContext<SSLAPI.Data.DataContext>(options =>
 
 var app = builder.Build();
 
+
+if (args.Length == 1 && args[0].ToLower() == "seeddata")
+    SeedData(app);
+
+void SeedData(IHost app)
+{
+    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
+
+    using (var scope = scopedFactory.CreateScope())
+    {
+        var service = scope.ServiceProvider.GetService<SSLAPI.Seed>();
+        service.SeedDataContext();
+    }
+}
+
+
+
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
