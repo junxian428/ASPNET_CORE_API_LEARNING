@@ -1,14 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "ACj8Mu0V8eJxfaDCwGFopSQMDSb6m5xnufUpW+QOJ65WbRxlFJ7bobl9mPfi8MW28DEz0MlleUng+V9n0mVqTA==",
+  "dgSpecHash": "7y2tQfcQ186sJWj6vEAzoXRoeziqRKlG9sZkOUu9FG+NxTcUN7Umw4ic6X+nerjjUXvjV/mv+a3Jf1jS16Dqnw==",
   "success": true,
   "projectFilePath": "C:\\Users\\junxian428\\source\\repos\\SSLAPI\\SSLAPI\\SSLAPI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\junxian428\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\junxian428\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\junxian428\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\junxian428\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\junxian428\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\junxian428\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\junxian428\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\junxian428\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\junxian428\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "C:\\Users\\junxian428\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\junxian428\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",
