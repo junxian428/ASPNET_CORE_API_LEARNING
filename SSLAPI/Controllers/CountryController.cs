@@ -31,5 +31,34 @@ namespace SSLAPI.Controllers
             return Ok(countries);
         }
 
+
+        [HttpGet("{countryId}")]
+        [ProducesResponseType(200, Type = typeof(Country))]
+        [ProducesResponseType(400)]
+        public IActionResult GetPokemon(int countryId)
+        {
+            if (!_countryRepository.CountryExists(countryId))
+                return NotFound();
+            var country = _mapper.Map<CountryDto>(_countryRepository.GetCountry(countryId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(country);
+        }
+
+        [HttpGet("/owners/{ownerId}")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(200, Type = typeof(Country))]
+        public IActionResult GetCountryOfAnOwner(int ownerId)
+        {
+            var country = _mapper.Map<CountryDto>(_countryRepository.GetCountry(ownerId));
+
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            return Ok(country);
+        }
+
     }
 }
