@@ -78,5 +78,20 @@ namespace SSLAPI.Controllers
 
         }
 
+
+        [HttpPost("attend")]
+        public IActionResult CreatePerson([FromBody] Attendance name)
+        {
+            // Perform the desired actions with the received data
+            // For example, you can store it in a database or perform some processing
+
+            // Return a response
+            Console.WriteLine(name.Name);
+            DateTime currentTime = DateTime.Now;
+            string responseMessage = $"Person '{name.Name}' attends the class at {currentTime}";
+
+            return Ok(responseMessage);
+        }
+
     }
 }
