@@ -10,6 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddTransient<SSLAPI.Seed>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<SSLAPI.Interfaces.IPokemonRepository, SSLAPI.Repository.PokemonRepository>();
+builder.Services.AddScoped<SSLAPI.Interfaces.ICategoryRepository, SSLAPI.Repository.CategoryRepository>();
+builder.Services.AddScoped<SSLAPI.Interfaces.ICountryRepository, SSLAPI.Repository.CountryRepository>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
