@@ -21,6 +21,11 @@ namespace SSLAPI.Interfaces
 
         bool UpdateReview(Review review);
 
+        /// For Pokemon Delete
+        bool DeleteReview(Review review);
+
+        bool DeleteReviews(List<Review> reviews);
+
 
 
     }

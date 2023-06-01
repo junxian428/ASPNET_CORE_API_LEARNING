@@ -23,5 +23,9 @@ namespace SSLAPI.Interfaces
         // Put
         bool UpdateCountry(Country country);
 
+        // Delete
+
+        bool DeleteCountry(Country country);
+
     }
 }

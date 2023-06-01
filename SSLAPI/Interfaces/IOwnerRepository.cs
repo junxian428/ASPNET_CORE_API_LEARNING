@@ -22,5 +22,9 @@ namespace SSLAPI.Interfaces
         //
         bool UpdateOwner(Owner owner);
 
+        // Delete
+
+        bool DeleteOwner(Owner owner);
+
     }
 }

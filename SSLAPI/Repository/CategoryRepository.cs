@@ -61,5 +61,13 @@ namespace SSLAPI.Repository
             _context.Update(category);
             return Save();
         }
+
+        public bool DeleteCategory(Category category)
+        {
+            _context.Remove(category);
+            return Save();
+        }
+
+      
     }
 }

@@ -18,5 +18,8 @@ namespace SSLAPI.Interfaces
         // Put
         bool UpdatePokemon(int ownerId, int categoryId, Pokemon pokemon);
 
+        // Delete
+        bool DeletePokemon(Pokemon pokemon);
+
     }
 }

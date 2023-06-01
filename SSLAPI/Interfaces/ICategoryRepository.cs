@@ -22,7 +22,8 @@ namespace SSLAPI.Interfaces
         // Update API
         bool UpdateCategory(Category category);
 
-        //
+        // Delete 
+        bool DeleteCategory(Category category);
 
 
     }
