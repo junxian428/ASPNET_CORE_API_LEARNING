@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,10 +9,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddTransient<SSLAPI.Seed>();
+
+builder.Services.AddControllers().AddJsonOptions(x =>
+                x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<SSLAPI.Interfaces.IPokemonRepository, SSLAPI.Repository.PokemonRepository>();
 builder.Services.AddScoped<SSLAPI.Interfaces.ICategoryRepository, SSLAPI.Repository.CategoryRepository>();
 builder.Services.AddScoped<SSLAPI.Interfaces.ICountryRepository, SSLAPI.Repository.CountryRepository>();
+builder.Services.AddScoped<SSLAPI.Interfaces.IOwnerRepository, SSLAPI.Repository.OwnerRepository>();
+builder.Services.AddScoped<SSLAPI.Interfaces.IReviewRepository, SSLAPI.Repository.ReviewRepository>();
+builder.Services.AddScoped<SSLAPI.Interfaces.IReviewerRepository, SSLAPI.Repository.ReviewerRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
