@@ -16,5 +16,8 @@ namespace SSLAPI.Interfaces
         bool CreateReviewer(Reviewer reviewer);
 
         bool Save();
+        //
+        bool UpdateReviewer(Reviewer reviewer);
+
     }
 }

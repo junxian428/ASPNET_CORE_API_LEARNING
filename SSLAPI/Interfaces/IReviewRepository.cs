@@ -17,6 +17,10 @@ namespace SSLAPI.Interfaces
 
         bool Save();
 
+        // 
+
+        bool UpdateReview(Review review);
+
 
 
     }

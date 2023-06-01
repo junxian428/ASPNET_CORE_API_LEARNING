@@ -14,11 +14,14 @@ namespace SSLAPI.Interfaces
 
         bool CountryExists(int id);
 
-        //
+        // Post method
 
         bool CreateCountry(Country country);
 
         bool Save();
+
+        // Put
+        bool UpdateCountry(Country country);
 
     }
 }

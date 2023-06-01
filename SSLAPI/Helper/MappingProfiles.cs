@@ -8,16 +8,17 @@ namespace SSLAPI.Helper
     {
         public MappingProfiles()
         {
+            //GET
             CreateMap<Pokemon, PokemonDto>();
             CreateMap<Category, CategoryDto>();
-            //
+            // POST & PUT
             CreateMap<CategoryDto, Category>();
             CreateMap<CountryDto, Country>();
             CreateMap<OwnerDto, Owner>();
             CreateMap<PokemonDto, Pokemon>();
             CreateMap<ReviewDto, Review>();
             CreateMap<ReviewerDto, Reviewer>();
-            //
+            //GET
             CreateMap<Country, CountryDto>();
             CreateMap<Owner, OwnerDto>();
             CreateMap<Review, ReviewDto>();

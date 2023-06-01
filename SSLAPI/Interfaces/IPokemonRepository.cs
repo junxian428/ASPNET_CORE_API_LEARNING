@@ -15,6 +15,8 @@ namespace SSLAPI.Interfaces
         bool CreatePokemon(int ownerId, int categoryId, Pokemon pokemon);
 
         bool Save();
+        // Put
+        bool UpdatePokemon(int ownerId, int categoryId, Pokemon pokemon);
 
     }
 }

@@ -19,5 +19,8 @@ namespace SSLAPI.Interfaces
 
         bool Save();
 
+        //
+        bool UpdateOwner(Owner owner);
+
     }
 }

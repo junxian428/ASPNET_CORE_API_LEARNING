@@ -19,5 +19,11 @@ namespace SSLAPI.Interfaces
 
         bool Save();
 
+        // Update API
+        bool UpdateCategory(Category category);
+
+        //
+
+
     }
 }
