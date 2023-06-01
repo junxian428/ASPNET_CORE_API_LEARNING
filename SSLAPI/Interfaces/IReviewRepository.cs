@@ -12,5 +12,12 @@ namespace SSLAPI.Interfaces
 
         bool ReviewExists(int reviewId);
 
+        //
+        bool CreatedReview(Review review);
+
+        bool Save();
+
+
+
     }
 }

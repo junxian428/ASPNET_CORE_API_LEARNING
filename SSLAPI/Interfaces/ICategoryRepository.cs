@@ -4,6 +4,7 @@ namespace SSLAPI.Interfaces
 {
     public interface ICategoryRepository
     {
+        // Read Object
         ICollection<Category> GetCategories();
         Category GetCategory(int id);
 
@@ -11,6 +12,12 @@ namespace SSLAPI.Interfaces
 
 
         bool CategoryExist(int id);
+
+        // Create Object
+
+        bool CreateCategory(Category category);
+
+        bool Save();
 
     }
 }

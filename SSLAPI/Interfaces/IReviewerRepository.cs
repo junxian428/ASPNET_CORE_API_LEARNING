@@ -10,5 +10,11 @@ namespace SSLAPI.Interfaces
         ICollection<Review> GetReviewsByReviewer(int reviewersId);
 
         bool ReviewerExist(int reviewersId);
+
+        //
+
+        bool CreateReviewer(Reviewer reviewer);
+
+        bool Save();
     }
 }

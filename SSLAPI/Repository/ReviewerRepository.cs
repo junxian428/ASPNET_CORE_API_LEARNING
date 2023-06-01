@@ -17,6 +17,12 @@ namespace SSLAPI.Repository
             _mapper = mapper;   
         }
 
+        public bool CreateReviewer(Reviewer reviewer)
+        {
+            _context.Add(reviewer);
+            return Save();
+        }
+
         public Reviewer GetReviewer(int reviewersId)
         {
             return _context.Reviewers.Where(r => r.Id == reviewersId).Include(e => e.Reviews ).FirstOrDefault();
@@ -37,5 +43,10 @@ namespace SSLAPI.Repository
             return _context.Reviewers.Any(r => r.Id == reviewersId);
         }
 
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
+        }
     }
 }
